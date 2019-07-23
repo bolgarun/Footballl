@@ -34,6 +34,7 @@ if len(row_to_dict(all_row)) % 5 == 0 and len(row_to_dict(all_row)) >= 10:
         if list_command[0] < 2:
             final_list.append(list_command)
     num = 1.5
+    final = []
     for a in final_list:
         if a[0] < num:
             num = a[0]
@@ -41,8 +42,10 @@ if len(row_to_dict(all_row)) % 5 == 0 and len(row_to_dict(all_row)) >= 10:
             num = num
     for x in final_list:
         if x[0] == num:
-            print(x)
+            final.append(x)
+    import random
 
+    print(random.choice(final))
 elif len(row_to_dict(all_row)) % 4 == 0 and len(row_to_dict(all_row)) >= 8:
     n = 600
     final_list = []
